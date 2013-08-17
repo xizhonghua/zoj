@@ -1,3 +1,4 @@
+//3405295	2013-08-17 13:44:06	 Accepted	1094	C++	0	188	花花的表世界
 //3405230	2013-08-17 13:15:16	 Accepted	1094	C++	0	188	花花的表世界
 #include <iostream>
 #include <string>
@@ -6,11 +7,11 @@
 using namespace std;
 
 struct Matrix {
-	int id;
+	char id;
 	int rows;
 	int cols;
 	Matrix(){}
-	Matrix(int id, int rows, int cols){
+	Matrix(char id, int rows, int cols){
 		this->id = id;
 		this->rows = rows;
 		this->cols = cols;
@@ -18,47 +19,38 @@ struct Matrix {
 };
 
 int main(){
-	int n, rows, cols;
-	char id;
-	map<int, Matrix> M;
+	int n;
 	cin>>n;
-	int mid = 10000;
+	Matrix M[28];
 	for(int i=0;i<n;i++){
-		cin>>id>>rows>>cols;
 		Matrix m;
-		m.id = id - 'A';
-		m.rows = rows;
-		m.cols = cols;
-		M[m.id] = m;
+		cin>>m.id>>m.rows>>m.cols;
+		m.id -= ('A' - 1);
+		M[(int)m.id] = m;
 	}
 	string line;
+	int mid = 1000;
 	while(cin>>line){
 		if(line.length() == 1){
-			int id = line[0] - 'A';
-			cout<<(M.count(id) ? "0" : "error")<<endl;
+			int id = line[0] - 'A' + 1;
+			cout<<(M[id].id != 0 ? "0" : "error")<<endl;
 		}
 		else{
 			int ans = 0;
-			stack<int> s;
+			stack<Matrix> s;
 			bool flag = true;
 			for(size_t i=0;i<line.length()&&flag;i++)
-				if(line[i] == '('){
-
+				if(line[i] >= 'A' && line[i] <= 'Z'){
+					int id = line[i] - 'A' + 1;
+					if(M[id].id == 0) {flag = false; break; }
+					s.push(M[id]);
 				}else if(line[i] == ')'){
-					const Matrix& r = M[s.top()]; s.pop();
-					const Matrix& l = M[s.top()]; s.pop();
-					if(l.cols != r.rows) {
-						flag = false; break;
-					}
+					const Matrix& r = s.top(); s.pop();
+					const Matrix& l = s.top(); s.pop();
+					if(l.cols != r.rows) { flag = false; break; }
 					ans += (l.rows*l.cols*r.cols);
 					Matrix nm(++mid, l.rows, r.cols);
-					M[nm.id] = nm;
-					s.push(nm.id);
-				}else{
-					int id = line[i] - 'A';
-					if(!M.count(id)) {flag = false; break; }
-					const Matrix& cur = M[id];
-					s.push(cur.id);
+					s.push(nm);
 				}
 
 			if(flag)
@@ -67,7 +59,5 @@ int main(){
 				cout<<"error"<<endl;
 		}
 	}
-
-
 	return 0;
 }
