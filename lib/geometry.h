@@ -78,6 +78,14 @@ public:
 		this->r = circle.r;
 	}
 
+	bool contains(const Vector2& pt){
+		return this->center.dist(pt) <= this->r;
+	}
+
+	bool contains(double x, double y){
+		return this->contains(Vector2(x,y));
+	}
+
 	void swap(Circle& c){
 		Circle t = c;
 		c = *this;
