@@ -4,7 +4,7 @@
  *  Created on: Dec 28, 2013
  *      Author: zhonghua
  */
-//3496838	2013-12-29 02:25:34	 Accepted	1234	C++	140	332	xxfflower
+//3496839	2013-12-29 02:31:15	 Accepted	1234	C++	100	332	xxfflower
 
 #include <iostream>
 #include <vector>
@@ -13,7 +13,7 @@
 using namespace std;
 
 const int MAXN = 5000;
-int now[MAXN+1], pre[MAXN+1];
+int n1[MAXN+1], p1[MAXN+1];
 int c[MAXN+1];
 
 int main() {
@@ -29,6 +29,8 @@ int main() {
 		k+=8;
 
 		for(int i=0;i<n;i++) cin>>c[i];
+        int* pre = p1;
+        int* now = n1;
 
 		std::fill(pre, pre+n+1, 0);
 
