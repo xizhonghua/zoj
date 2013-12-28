@@ -5,17 +5,14 @@ public:
 	double x;
 	double y;
 
-	Vector2() { this->x = this->y = 0; }
+	Vector2() :x(0), y(0) {}
 
 	Vector2(const Vector2& pt){
 		this->x = pt.x;
 		this->y = pt.y;
 	}
 
-	Vector2(double x, double y){
-		this->x = x;
-		this->y = y;
-	}
+	Vector2(double x, double y) :x(x), y(y) {}
 
 	double dist(const Vector2& pt){
 		return std::sqrt((x - pt.x)*(x - pt.x) + (y-pt.y)*(y-pt.y));
