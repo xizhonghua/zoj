@@ -1,42 +1,47 @@
-// 3831048  2014-11-29 04:08:49 Accepted    1257    C++0x   0   272 xxfflower
+// 3831054 2014-11-29 04:19:26 Accepted    1257    C++0x   0   272 xxfflower
 #include <iostream>
 #include <string>
 #include <algorithm>
 #include <vector>
 #include <map>
+#include <climits>
 using namespace std;
 
+const int MAX_LOTS = 20;
+
 struct car {
-    int start;
+    int org;
     int cur;
     int parked;
+
+    int dist_to(const int target_pos) {
+        if(this->parked>0) return INT_MAX;
+        int dist = target_pos - this->cur;
+        if(dist<0) dist+=MAX_LOTS;
+        return dist;
+    }
+
+    void move(const int dist) {
+        if(this->parked>0) return;
+        this->cur += dist;
+        if(this->cur > MAX_LOTS)
+            this->cur -= MAX_LOTS;
+    }
 };
 
 int main(int argc, char** argv) {
-    
     vector<car> cars;
-
     int p;
-    while(true) {
-        cin>>p;        
-        if (p==99) break;
 
-        car c;
-        c.start = p;
-        c.cur = p;
-        c.parked = -1;
-
-        cars.push_back(c);
-    }
+    while(cin>>p && p!=99)
+        cars.push_back((car){p,p,-1});
 
     while(cin>>p) {
-        int best_dist = 21;
+        int best_dist = MAX_LOTS+1;
         car* best_car = NULL;
 
         for(auto& c : cars) {
-            if(c.parked > 0) continue;
-            int dist = p - c.cur;
-            if(dist<0) dist+=20;
+            int dist = c.dist_to(p);
             if(dist < best_dist) {
                 best_dist = dist;
                 best_car = &c;
@@ -45,17 +50,13 @@ int main(int argc, char** argv) {
 
         if(best_car)
             best_car->parked = p;
-        
 
-        for(auto& c : cars) {
-            if(c.parked > 0) continue;
-            c.cur += best_dist;
-            if(c.cur > 20) c.cur -= 20;
-        }
+        for(auto& c : cars)
+            c.move(best_dist);
     }
 
     for(const auto& c : cars) {
-        cout<<"Original position "<<c.start;
+        cout<<"Original position "<<c.org;
         if(c.parked>0) 
             cout<<" parked in "<<c.parked<<endl;
         else 
