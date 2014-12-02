@@ -14,5 +14,7 @@ http://acm.zju.edu.cn/onlinejudge/
 |1602|[Multiplication Puzzle](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1602) |  [Solution](vol_07/1602.cpp) | ** | [Blog](http://blog.xiaohuahua.org/2014/11/29/zoj-1602-multiplication-puzzle/)
 
 #### Simulation
-
+|Code| Problem | Solution | Difficuty | Reading |
+|----|:-------:|----------|:---------:|:----:|
+|1257|[Parking Lot](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1257) |  [Solution](vol_03/1257.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/28/zoj-1257-parking-lot/)
 
