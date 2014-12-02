@@ -19,7 +19,7 @@ http://acm.zju.edu.cn/onlinejudge/
 |1257|[Parking Lot](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1257) |  [Solution](vol_03/1257.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/28/zoj-1257-parking-lot/) | 11/28/2014 |
 |3804|[YY's Minions](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3804) |  [Solution](vol_29/3804.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3804-yys-minions/) | 11/26/2014 |
 
-### Definition (Brute Force)
+###  Brute Force (by definition)
 |Code| Problem | Solution | Difficuty | Reading | Date |
 |----|:-------:|----------|:---------:|:-------:|:----:|
 |3809|[The Himalayas](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3809) |  [Solution](vol_29/3809.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3809-the-himalayas/) | 11/26/2014 |
