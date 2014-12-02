@@ -4,4 +4,7 @@ http://acm.zju.edu.cn/onlinejudge/
 
 ### Categories
 #### Number Theorem
-* [1537 - Playing with a Calculator](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1537) |  [Solution](vol_06/1537.cpp) 
+|Code| Problem | Solution | Difficuty |
+|----|:-------:|----------|:---------:|
+|1537|[Playing with a Calculator](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1537) |  [Solution](vol_06/1537.cpp) | ** |
+
