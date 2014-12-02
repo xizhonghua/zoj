@@ -17,10 +17,21 @@ http://acm.zju.edu.cn/onlinejudge/
 |Code| Problem | Solution | Difficuty | Reading | Date |
 |----|:-------:|----------|:---------:|:-------:|:----:|
 |1257|[Parking Lot](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=1257) |  [Solution](vol_03/1257.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/28/zoj-1257-parking-lot/) | 11/28/2014 |
-|3804|[Parking Lot](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3804) |  [Solution](vol_29/3804.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3804-yys-minions/) | 11/26/2014 |
+|3804|[YY's Minions](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3804) |  [Solution](vol_29/3804.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3804-yys-minions/) | 11/26/2014 |
+
+### Definition (Brute Force)
+|Code| Problem | Solution | Difficuty | Reading | Date |
+|----|:-------:|----------|:---------:|:-------:|:----:|
+|3809|[The Himalayas](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3809) |  [Solution](vol_29/3809.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3809-the-himalayas/) | 11/26/2014 |
+|3827|[Information Entropy](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3827) |  [Solution](vol_29/3827.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3827-information-entropy/) | 11/26/2014 |
 
 
 #### Probobility
 |Code| Problem | Solution | Difficuty | Reading | Date |
 |----|:-------:|----------|:---------:|:-------:|:----:|
 |3793|[First Digit](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3793) |  [Solution](vol_28/3793.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3793-first-digit/)| 11/26/2014 |
+
+#### Math
+|Code| Problem | Solution | Difficuty | Reading | Date |
+|----|:-------:|----------|:---------:|:-------:|:----:|
+|3819|[Average Score](http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3819) |  [Solution](vol_29/3819.cpp) | * | [Blog](http://blog.xiaohuahua.org/2014/11/26/zoj-3819-average-score/)| 11/26/2014 |
