@@ -1,9 +1,6 @@
 //3847612   2015-01-08 04:18:16 Accepted    3775    C++0x   0   272 xxfflower
 #include <iostream>
 #include <string>
-#include <algorithm>
-#include <vector>
-#include <map>
 using namespace std;
 
 class Program
@@ -18,8 +15,6 @@ public:
             }
         return output;
     }
-private:
-    string _source;
 };
 
 int main(int argc, char** argv) {
